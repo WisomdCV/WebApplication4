@@ -15,8 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a744602d-9652-458a-aeb7-111bfec0fc7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/Interfaces/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/GenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP.Infrastructure/WISOMAPP.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP.Infrastructure/WISOMAPP.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WISOMAPP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +46,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/ApplicationAssemblyReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/Interfaces/IGenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/Interfaces/IUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Response.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Role.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Ticket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/UserRole.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/GenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -211,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761675884634</updated>
-      <workItem from="1761675886788" duration="5236000" />
+      <workItem from="1761675886788" duration="6260000" />
     </task>
     <servers />
   </component>

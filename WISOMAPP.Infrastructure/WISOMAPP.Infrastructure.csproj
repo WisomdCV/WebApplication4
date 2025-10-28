@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\WISOMAPP.Application\WISOMAPP.Application.csproj" />
       <ProjectReference Include="..\WISOMAPP.Domain\WISOMAPP.Domain.csproj" />
     </ItemGroup>
 

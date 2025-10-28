@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WISOMAPP.Infrastructure.Persistence;
+using WISOMAPP.Application.Interfaces;
+using WISOMAPP.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,8 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+// UnitOfWork
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // --- 3. Construcción de la Aplicación ---
 var app = builder.Build();
