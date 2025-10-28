@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WISOMAPP.Infrastructure.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Habilita el uso de Clases "Controller" para tu API
@@ -15,11 +18,11 @@ builder.Services.AddMediatR(cfg =>
     )
 );
 
-/* NOTA: Aquí también es donde agregarías tu DbContext
-   (lo haremos en el siguiente paso cuando conectemos la BD)
-   Ej: builder.Services.AddDbContext<TuDbContext>(...);
-*/
+/* NOTA: Aquí también es donde agregarías tu DbContext*/
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
 // --- 3. Construcción de la Aplicación ---
 var app = builder.Build();

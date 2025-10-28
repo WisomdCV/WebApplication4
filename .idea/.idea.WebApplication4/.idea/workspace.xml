@@ -15,13 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a744602d-9652-458a-aeb7-111bfec0fc7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Domain/Entities/Response.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Domain/Entities/Role.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Domain/Entities/Ticket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Domain/Entities/UserRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Persistence/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP.Domain/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761675884634</updated>
-      <workItem from="1761675886788" duration="4054000" />
+      <workItem from="1761675886788" duration="4223000" />
     </task>
     <servers />
   </component>
