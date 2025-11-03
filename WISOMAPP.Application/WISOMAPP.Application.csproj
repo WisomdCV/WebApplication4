@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="15.1.0" />
       <PackageReference Include="MediatR" Version="13.1.0" />
       <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
@@ -19,6 +20,10 @@
       </PackageReference>
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WISOMAPP.Domain\WISOMAPP.Domain.csproj" />
     </ItemGroup>
 
 </Project>
