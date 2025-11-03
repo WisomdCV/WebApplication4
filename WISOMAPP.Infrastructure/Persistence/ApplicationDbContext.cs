@@ -20,36 +20,75 @@ namespace WISOMAPP.Infrastructure.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configurar la llave primaria compuesta para UserRole
-            modelBuilder.Entity<UserRole>()
-                .HasKey(ur => new { ur.UserId, ur.RoleId });
+            // --- CONFIGURACIÓN DE NOMBRES ---
+            // Le decimos a EF que use los nombres exactos de tu script SQL
+            
+            // Tabla "roles"
+            modelBuilder.Entity<Role>(e =>
+            {
+                e.ToTable("roles");
+                e.Property(r => r.RoleId).HasColumnName("role_id");
+                e.Property(r => r.RoleName).HasColumnName("role_name");
+            });
 
-            // Configurar la relación User -> UserRole
-            modelBuilder.Entity<UserRole>()
-                .HasOne(ur => ur.User)
-                .WithMany(u => u.UserRoles)
-                .HasForeignKey(ur => ur.UserId);
+            // Tabla "users"
+            modelBuilder.Entity<User>(e =>
+            {
+                e.ToTable("users");
+                e.Property(u => u.UserId).HasColumnName("user_id");
+                e.Property(u => u.Username).HasColumnName("username");
+                e.Property(u => u.PasswordHash).HasColumnName("password_hash");
+                e.Property(u => u.Email).HasColumnName("email");
+                e.Property(u => u.CreatedAt).HasColumnName("created_at");
+            });
 
-            // Configurar la relación Role -> UserRole
-            modelBuilder.Entity<UserRole>()
-                .HasOne(ur => ur.Role)
-                .WithMany(r => r.UserRoles)
-                .HasForeignKey(ur => ur.RoleId); 
+            // Tabla "user_roles" (Tabla Pivote)
+            modelBuilder.Entity<UserRole>(e =>
+            {
+                e.ToTable("user_roles");
+                e.HasKey(ur => new { ur.UserId, ur.RoleId }); // Llave compuesta
+                e.Property(ur => ur.UserId).HasColumnName("user_id");
+                e.Property(ur => ur.RoleId).HasColumnName("role_id");
+                e.Property(ur => ur.AssignedAt).HasColumnName("assigned_at");
 
-            // Configurar la relación User (Responder) -> Response
-            modelBuilder.Entity<Response>()
-                .HasOne(r => r.Responder)
-                .WithMany(u => u.Responses)
-                .HasForeignKey(r => r.ResponderId);
-                
-            // --- ¡AQUÍ ESTÁ LA ACTUALIZACIÓN! ---
-            // Mapea las entidades a los nombres de tabla en minúsculas
-            // para que coincidan con tu script SQL de PostgreSQL.
-            modelBuilder.Entity<Role>().ToTable("roles");
-            modelBuilder.Entity<User>().ToTable("users");
-            modelBuilder.Entity<UserRole>().ToTable("user_roles");
-            modelBuilder.Entity<Ticket>().ToTable("tickets");
-            modelBuilder.Entity<Response>().ToTable("responses");
+                // Relaciones
+                e.HasOne(ur => ur.User)
+                 .WithMany(u => u.UserRoles)
+                 .HasForeignKey(ur => ur.UserId);
+
+                e.HasOne(ur => ur.Role)
+                 .WithMany(r => r.UserRoles)
+                 .HasForeignKey(ur => ur.RoleId);
+            });
+
+            // Tabla "tickets"
+            modelBuilder.Entity<Ticket>(e =>
+            {
+                e.ToTable("tickets");
+                e.Property(t => t.TicketId).HasColumnName("ticket_id");
+                e.Property(t => t.UserId).HasColumnName("user_id");
+                e.Property(t => t.Title).HasColumnName("title");
+                e.Property(t => t.Description).HasColumnName("description");
+                e.Property(t => t.Status).HasColumnName("status");
+                e.Property(t => t.CreatedAt).HasColumnName("created_at");
+                e.Property(t => t.ClosedAt).HasColumnName("closed_at");
+            });
+
+            // Tabla "responses"
+            modelBuilder.Entity<Response>(e =>
+            {
+                e.ToTable("responses");
+                e.Property(r => r.ResponseId).HasColumnName("response_id");
+                e.Property(r => r.TicketId).HasColumnName("ticket_id");
+                e.Property(r => r.ResponderId).HasColumnName("responder_id");
+                e.Property(r => r.Message).HasColumnName("message");
+                e.Property(r => r.CreatedAt).HasColumnName("created_at");
+
+                // Relación
+                e.HasOne(r => r.Responder)
+                 .WithMany(u => u.Responses)
+                 .HasForeignKey(r => r.ResponderId);
+            });
         }
     }
 }
