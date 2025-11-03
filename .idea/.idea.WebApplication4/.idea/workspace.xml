@@ -15,12 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a744602d-9652-458a-aeb7-111bfec0fc7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/DTOs/TicketResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/Queries/GetTicketById.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP/Controllers/TicketsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/Controllers/TicketsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Persistence/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP.Infrastructure/Persistence/ApplicationDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +221,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761675884634</updated>
       <workItem from="1761675886788" duration="8624000" />
-      <workItem from="1762129857160" duration="5193000" />
+      <workItem from="1762129857160" duration="5296000" />
     </task>
     <servers />
   </component>

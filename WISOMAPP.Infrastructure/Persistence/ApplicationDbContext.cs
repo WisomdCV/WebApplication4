@@ -34,13 +34,22 @@ namespace WISOMAPP.Infrastructure.Persistence
             modelBuilder.Entity<UserRole>()
                 .HasOne(ur => ur.Role)
                 .WithMany(r => r.UserRoles)
-                .HasForeignKey(ur => ur.RoleId);
+                .HasForeignKey(ur => ur.RoleId); 
 
             // Configurar la relación User (Responder) -> Response
             modelBuilder.Entity<Response>()
                 .HasOne(r => r.Responder)
                 .WithMany(u => u.Responses)
                 .HasForeignKey(r => r.ResponderId);
+                
+            // --- ¡AQUÍ ESTÁ LA ACTUALIZACIÓN! ---
+            // Mapea las entidades a los nombres de tabla en minúsculas
+            // para que coincidan con tu script SQL de PostgreSQL.
+            modelBuilder.Entity<Role>().ToTable("roles");
+            modelBuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<UserRole>().ToTable("user_roles");
+            modelBuilder.Entity<Ticket>().ToTable("tickets");
+            modelBuilder.Entity<Response>().ToTable("responses");
         }
     }
 }
