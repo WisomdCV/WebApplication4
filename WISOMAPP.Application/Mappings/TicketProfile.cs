@@ -1,6 +1,7 @@
 using AutoMapper;
 using WISOMAPP.Domain.Entities;
 using WISOMAPP.Application.UseCases.Tickets.Commands;
+using WISOMAPP.Application.UseCases.Tickets.DTOs;
 
 namespace WISOMAPP.Application.Mappings
 {
@@ -12,7 +13,7 @@ namespace WISOMAPP.Application.Mappings
 
             CreateMap<CreateTicketCommand, Ticket>();
 
-            // ... Aquí pondrás más mapeos en el futuro
+            CreateMap<Ticket, TicketResponse>();
         }
     }
 }

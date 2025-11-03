@@ -15,17 +15,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a744602d-9652-458a-aeb7-111bfec0fc7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/Commands/CreateTicket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/DTOs/TicketResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/Queries/GetTicketById.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP.Application/WISOMAPP.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP.Application/WISOMAPP.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISOMAPP/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISOMAPP/Controllers/TicketsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/Controllers/TicketsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WISOMAPP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WISOMAPP/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +51,8 @@
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/Interfaces/IUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/Mappings/TicketProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/Commands/CreateTicket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/DTOs/TicketResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP.Application/UseCases/Tickets/Queries/GetTicketById.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Response.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Role.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Domain/Entities/Ticket.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/GenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WISOMAPP.Infrastructure/Repositories/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WISOMAPP/Controllers/TicketsController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -66,21 +72,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.WEBAVWILSONDCV: http.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WEBAVWILSONDCV: http">
     <configuration name="WEBAVWILSONDCV: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WISOMAPP/WISOMAPP.csproj" />
@@ -219,7 +226,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761675884634</updated>
       <workItem from="1761675886788" duration="8624000" />
-      <workItem from="1762129857160" duration="2035000" />
+      <workItem from="1762129857160" duration="5193000" />
     </task>
     <servers />
   </component>

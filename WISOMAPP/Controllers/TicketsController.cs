@@ -1,6 +1,7 @@
 using MediatR; 
 using Microsoft.AspNetCore.Mvc;
 using WISOMAPP.Application.UseCases.Tickets.Commands; 
+using WISOMAPP.Application.UseCases.Tickets.Queries;
 
 namespace WISOMAPP.Controllers
 {
@@ -22,11 +23,16 @@ namespace WISOMAPP.Controllers
 
             return CreatedAtAction(nameof(GetTicketById), new { id = newTicketId }, newTicketId);
         }
-
+        
         [HttpGet("{id:guid}")]
-        public IActionResult GetTicketById(Guid id)
+        public async Task<IActionResult> GetTicketById(Guid id) 
         {
-            return Ok(new { Message = $"Placeholder: Próximo paso será implementar la consulta (Query) para el ID: {id}" });
+            var query = new GetTicketByIdQuery(id);
+            
+            var ticket = await _mediator.Send(query);
+            
+            return Ok(ticket);
         }
+        
     }
 }
